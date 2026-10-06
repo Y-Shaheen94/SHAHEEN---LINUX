@@ -1,3 +1,4 @@
+CYAN="\033[1;36m"; GREEN="\033[1;32m"; YELLOW="\033[1;33m"; MAGENTA="\033[1;35m"; NC="\033[0m"
 #!/usr/bin/env bash
 set -e
 
@@ -246,16 +247,16 @@ security_report() {
     title "SECURITY / REPORT"
 
     {
-        echo "SHΛYEN SECURITY REPORT"
+        echo "SHAHEEN SECURITY REPORT"
         echo "Generated: $(date)"
         echo "Environment: $(environment_name)"
         echo
         security_audit
         echo
         security_environment
-    } > "$SHAYEN_LOG_DIR/security-report.txt"
+    } > "$SHAHEEN_LOG_DIR/security-report.txt"
 
-    ok "Report: $SHAYEN_LOG_DIR/security-report.txt"
+    ok "Report: $SHAHEEN_LOG_DIR/security-report.txt"
 }
 EOF
 
@@ -266,7 +267,7 @@ crypto_hash() {
     local file="$1"
 
     [ -f "$file" ] || {
-        err "Usage: shayeen crypto hash <file>"
+        err "Usage: shaheen crypto hash <file>"
         return 1
     }
 
@@ -292,7 +293,7 @@ crypto_checksum() {
 }
 
 crypto_keygen() {
-    local output="${1:-shayeen.key}"
+    local output="${1:-shaheen.key}"
 
     if command -v openssl >/dev/null 2>&1; then
         openssl rand -hex 32 > "$output"

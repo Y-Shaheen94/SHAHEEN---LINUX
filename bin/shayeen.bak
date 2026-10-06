@@ -500,3 +500,76 @@ HELP
 esac
 
 shaheen_log "$*"
+
+my_custom_tools_menu() {
+    while true; do
+        clear && cat $HOME/shaheen/banner.txt
+        cat "$APP_DIR/banner.txt"
+        echo "========================================="
+        echo "       [ MY CUSTOM TOOLS MENU ]          "
+        echo "========================================="
+        echo " [1] Nmap Network Scanner"
+        echo " [2] RED HAWK Web Scanner"
+        echo " [3] IP Tracer"
+        echo " [0] Back to Main Menu"
+        echo "========================================="
+        read -p " Choose an option: " choice
+        
+        case $choice in
+            1) run_nmap ;;
+            2) run_redhawk ;;
+            3) run_iptracer ;;
+            0) break ;;
+            *) echo " [!] Invalid option"; sleep 1 ;;
+        esac
+    done
+}
+
+run_nmap() {
+    clear && cat $HOME/shaheen/banner.txt
+    read -p " Enter target IP or Domain: " target
+    [ -n "$target" ] && nmap -sV "$target" || echo " [!] No target."
+    read -p " Press Enter to return..."
+}
+
+run_redhawk() {
+    clear && cat $HOME/shaheen/banner.txt
+    if [ -d "$HOME/RED_HAWK" ]; then
+        cd "$HOME/RED_HAWK" && php redhawk.php
+    else
+        echo " [!] RED HAWK not installed."
+    fi
+    read -p " Press Enter to return..."
+}
+
+run_iptracer() {
+    clear && cat $HOME/shaheen/banner.txt
+    read -p " Enter IP address: " ip
+    [ -n "$ip" ] && ip-tracer -t "$ip" || echo " [!] No IP."
+    read -p " Press Enter to return..."
+}
+
+my_custom_tools_menu() {
+    clear && cat $HOME/shaheen/banner.txt
+    echo "========================================="
+    echo "       [ MY CUSTOM TOOLS MENU ]          "
+    echo "========================================="
+    echo " [1] Nmap Network Scanner"
+    echo " [2] RED HAWK Web Scanner"
+    echo " [3] IP Tracer"
+    echo " [0] Back to Main Menu"
+    echo "========================================="
+    read -p " Choose an option: " choice
+    case $choice in
+        1) run_nmap ;;
+        2) run_redhawk ;;
+        3) run_iptracer ;;
+        0) return ;;
+        *) echo " [!] Invalid option"; sleep 1 ;;
+    esac
+    my_custom_tools_menu
+}
+
+run_nmap() { clear && cat $HOME/shaheen/banner.txt; read -p " Enter target IP: " target; nmap -sV "$target"; read -p " Press Enter to return..."; }
+run_redhawk() { clear && cat $HOME/shaheen/banner.txt; cd $HOME/RED_HAWK && php redhawk.php; read -p " Press Enter to return..."; }
+run_iptracer() { clear && cat $HOME/shaheen/banner.txt; read -p " Enter IP: " ip; ip-tracer -t "$ip"; read -p " Press Enter to return..."; }

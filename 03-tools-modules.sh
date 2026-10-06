@@ -1,3 +1,4 @@
+CYAN="\033[1;36m"; GREEN="\033[1;32m"; YELLOW="\033[1;33m"; MAGENTA="\033[1;35m"; NC="\033[0m"
 #!/usr/bin/env bash
 set -e
 
@@ -9,7 +10,7 @@ cat > "$ROOT/modules/download/download.sh" <<'EOF'
 download_file() {
     local url="$1"
     [ -n "$url" ] || {
-        err "Usage: shayeen download <URL>"
+        err "Usage: shaheen download <URL>"
         return 1
     }
 
@@ -366,7 +367,7 @@ cat > "$ROOT/modules/settings/settings.sh" <<'EOF'
 #!/usr/bin/env bash
 
 settings_theme() {
-    printf 'Theme: SHΛYEN Dark / Silent Sovereign\n'
+    printf 'Theme: SHAHEEN Dark / Silent Sovereign\n'
 }
 
 settings_language() {
@@ -378,24 +379,24 @@ settings_editor() {
 }
 
 settings_paths() {
-    printf 'ROOT : %s\n' "$SHAYEN_ROOT"
-    printf 'DATA : %s\n' "$SHAYEN_DATA_DIR"
-    printf 'LOGS : %s\n' "$SHAYEN_LOG_DIR"
+    printf 'ROOT : %s\n' "$SHAHEEN_ROOT"
+    printf 'DATA : %s\n' "$SHAHEEN_DATA_DIR"
+    printf 'LOGS : %s\n' "$SHAHEEN_LOG_DIR"
 }
 
 settings_logs() {
-    if [ -f "$SHAYEN_LOG_DIR/shayeen.log" ]; then
-        tail -100 "$SHAYEN_LOG_DIR/shayeen.log"
+    if [ -f "$SHAHEEN_LOG_DIR/shaheen.log" ]; then
+        tail -100 "$SHAHEEN_LOG_DIR/shaheen.log"
     else
         printf 'No logs yet.\n'
     fi
 }
 
 settings_update() {
-    if [ -d "$SHAYEN_ROOT/.git" ]; then
-        git -C "$SHAYEN_ROOT" pull --ff-only
+    if [ -d "$SHAHEEN_ROOT/.git" ]; then
+        git -C "$SHAHEEN_ROOT" pull --ff-only
     else
-        warn "SHΛYEN is not a Git working tree."
+        warn "SHAHEEN is not a Git working tree."
     fi
 }
 EOF

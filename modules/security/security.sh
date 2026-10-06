@@ -1,3 +1,4 @@
+CYAN="\033[1;36m"; GREEN="\033[1;32m"; YELLOW="\033[1;33m"; MAGENTA="\033[1;35m"; NC="\033[0m"
 #!/usr/bin/env bash
 
 security_audit() {
@@ -74,14 +75,14 @@ security_report() {
     title "SECURITY / REPORT"
 
     {
-        echo "SHΛYEN SECURITY REPORT"
+        echo "SHAHEEN SECURITY REPORT"
         echo "Generated: $(date)"
         echo "Environment: $(environment_name)"
         echo
         security_audit
         echo
         security_environment
-    } > "$SHAYEN_LOG_DIR/security-report.txt"
+    } > "$SHAHEEN_LOG_DIR/security-report.txt"
 
-    ok "Report: $SHAYEN_LOG_DIR/security-report.txt"
+    ok "Report: $SHAHEEN_LOG_DIR/security-report.txt"
 }

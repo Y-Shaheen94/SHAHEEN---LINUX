@@ -1,0 +1,3 @@
+#!/data/data/com.termux/files/usr/bin/bash
+cd "$HOME/shaheen" || exit 1
+exec bash "$HOME/shaheen/bin/shaheen" "$@"

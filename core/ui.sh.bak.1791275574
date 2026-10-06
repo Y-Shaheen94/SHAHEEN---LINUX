@@ -16,13 +16,13 @@ CYAN="${ESC}[36m"
 WHITE="${ESC}[37m"
 
 BRIGHT_BLACK="${ESC}[90m"
-BRIGHT_RED="${ESC}[38;5;196m"
+BRIGHT_RED="${ESC}[91m"
 BRIGHT_GREEN="${ESC}[38;5;46m"
 BRIGHT_YELLOW="${ESC}[38;5;226m"
-BRIGHT_BLUE="${ESC}[38;5;39m"
+BRIGHT_BLUE="${ESC}[94m"
 BRIGHT_MAGENTA="${ESC}[38;5;201m"
 BRIGHT_CYAN="${ESC}[38;5;51m"
-BRIGHT_WHITE="${ESC}[38;5;255m"
+BRIGHT_WHITE="${ESC}[38;5;231m"
 
 line() {
     printf '%s\n' "${BRIGHT_BLACK}────────────────────────────────────────────────────────────────${RESET}"
@@ -75,34 +75,4 @@ header() {
     # falcon removed
     printf '\n'
     printf '%s%s%s ~/shaheen $ %s\n' "$BRIGHT_MAGENTA" "⟦SN-🜏⟧" "$BRIGHT_WHITE" "$RESET"
-}
-
-animate_shaheen() {
-    local name="SHAHEEN"
-
-    printf "\r${BRIGHT_MAGENTA}⟦SN-🜏⟧ ${RESET}"
-
-    for ((i=1;i<=${#name};i++)); do
-        printf "\r${BRIGHT_MAGENTA}⟦SN-🜏⟧ ${BRIGHT_CYAN}%s${RESET}" \
-            "${name:0:i}"
-        sleep 0.06
-    done
-
-    printf "\r${BRIGHT_MAGENTA}⟦SN-🜏⟧ ${BRIGHT_GREEN}READY${RESET}\n"
-}
-
-status_install() {
-    printf "${BRIGHT_BLUE}[INSTALL]${RESET} %s\n" "$1"
-}
-
-status_ok() {
-    printf "${BRIGHT_GREEN}[SUCCESS]${RESET} %s\n" "$1"
-}
-
-status_error() {
-    printf "${BRIGHT_RED}[ERROR]${RESET} %s\n" "$1"
-}
-
-status_warn() {
-    printf "${BRIGHT_YELLOW}[WARNING]${RESET} %s\n" "$1"
 }

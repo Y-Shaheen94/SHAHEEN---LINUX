@@ -1,3 +1,4 @@
+CYAN="\033[1;36m"; GREEN="\033[1;32m"; YELLOW="\033[1;33m"; MAGENTA="\033[1;35m"; NC="\033[0m"
 #!/usr/bin/env bash
 
 files_info() {
@@ -6,7 +7,7 @@ files_info() {
     title "FILES / INFORMATION"
 
     if [ -z "$target" ]; then
-        err "Usage: shayeen files info <file>"
+        err "Usage: shaheen files info <file>"
         return 1
     fi
 
@@ -50,7 +51,7 @@ files_search() {
     local path="${2:-$HOME}"
 
     if [ -z "$pattern" ]; then
-        err "Usage: shayeen files search <pattern> [path]"
+        err "Usage: shaheen files search <pattern> [path]"
         return 1
     fi
 
@@ -66,12 +67,12 @@ files_search() {
 
 files_copy() {
     [ -n "$1" ] || {
-        err "Usage: shayeen files copy <source> <destination>"
+        err "Usage: shaheen files copy <source> <destination>"
         return 1
     }
 
     [ -n "$2" ] || {
-        err "Usage: shayeen files copy <source> <destination>"
+        err "Usage: shaheen files copy <source> <destination>"
         return 1
     }
 
@@ -81,12 +82,12 @@ files_copy() {
 
 files_move() {
     [ -n "$1" ] || {
-        err "Usage: shayeen files move <source> <destination>"
+        err "Usage: shaheen files move <source> <destination>"
         return 1
     }
 
     [ -n "$2" ] || {
-        err "Usage: shayeen files move <source> <destination>"
+        err "Usage: shaheen files move <source> <destination>"
         return 1
     }
 
@@ -96,12 +97,12 @@ files_move() {
 
 files_rename() {
     [ -n "$1" ] || {
-        err "Usage: shayeen files rename <old> <new>"
+        err "Usage: shaheen files rename <old> <new>"
         return 1
     }
 
     [ -n "$2" ] || {
-        err "Usage: shayeen files rename <old> <new>"
+        err "Usage: shaheen files rename <old> <new>"
         return 1
     }
 
@@ -113,7 +114,7 @@ files_delete() {
     local target="$1"
 
     if [ -z "$target" ]; then
-        err "Usage: shayeen files delete <file>"
+        err "Usage: shaheen files delete <file>"
         return 1
     fi
 
@@ -141,7 +142,7 @@ files_compress() {
     local output="${2:-archive.tar.gz}"
 
     if [ -z "$source" ]; then
-        err "Usage: shayeen files compress <source> [archive.tar.gz]"
+        err "Usage: shaheen files compress <source> [archive.tar.gz]"
         return 1
     fi
 
@@ -154,7 +155,7 @@ files_extract() {
     local destination="${2:-.}"
 
     if [ -z "$archive" ]; then
-        err "Usage: shayeen files extract <archive> [destination]"
+        err "Usage: shaheen files extract <archive> [destination]"
         return 1
     fi
 
@@ -194,7 +195,7 @@ files_checksum() {
     local target="$1"
 
     if [ -z "$target" ]; then
-        err "Usage: shayeen files checksum <file>"
+        err "Usage: shaheen files checksum <file>"
         return 1
     fi
 
@@ -217,7 +218,7 @@ files_permissions() {
     local target="$1"
 
     if [ -z "$target" ]; then
-        err "Usage: shayeen files permissions <file>"
+        err "Usage: shaheen files permissions <file>"
         return 1
     fi
 

@@ -1,9 +1,10 @@
+CYAN="\033[1;36m"; GREEN="\033[1;32m"; YELLOW="\033[1;33m"; MAGENTA="\033[1;35m"; NC="\033[0m"
 #!/usr/bin/env bash
 set -e
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-cat > "$ROOT/bin/shayeen" <<'EOF'
+cat > "$ROOT/bin/shaheen" <<'EOF'
 #!/usr/bin/env bash
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -32,7 +33,7 @@ do
 done
 
 build_project() {
-    title "SHΛYEN / BUILD ENGINE"
+    title "SHAHEEN / BUILD ENGINE"
 
     dev_detect
 
@@ -248,11 +249,11 @@ show_dashboard() {
         printf '%s└────────────────────┴────────────────────┴────────────────────┘%s\n' "$BRIGHT_BLACK" "$RESET"
 
         printf '\n%sQuick Commands%s\n' "$BOLD" "$RESET"
-        printf '  shayeen system info\n'
-        printf '  shayeen crypto hash file.txt\n'
-        printf '  shayeen download <URL>\n'
-        printf '  shayeen dev detect\n'
-        printf '  shayeen build\n'
+        printf '  shaheen system info\n'
+        printf '  shaheen crypto hash file.txt\n'
+        printf '  shaheen download <URL>\n'
+        printf '  shaheen dev detect\n'
+        printf '  shaheen build\n'
 
         printf '\n%sEnvironment: %s%s\n\n' "$DIM" "$(environment_name)" "$RESET"
 
@@ -438,35 +439,35 @@ case "${1:-}" in
         ;;
 
     --version|-v)
-        printf '%s\n' "$SHAYEN_NAME $SHAYEN_VERSION"
-        printf '%s\n' "$SHAYEN_TITLE"
+        printf '%s\n' "$SHAHEEN_NAME $SHAHEEN_VERSION"
+        printf '%s\n' "$SHAHEEN_TITLE"
         ;;
 
     --help|-h)
         cat <<HELP
 
-SHΛYEN TOOLKIT
+SHAHEEN TOOLKIT
 THE SILENT SOVEREIGN
-Version $SHAYEN_VERSION
+Version $SHAHEEN_VERSION
 
 KNOW • BUILD • PROTECT
-SYN-94
+SHAHEEN
 
 Usage:
-  shayeen
+  shaheen
   sn
 
 Direct commands:
-  shayeen system info
-  shayeen network diagnostics
-  shayeen security audit
-  shayeen crypto hash file.txt
-  shayeen download <URL>
-  shayeen files search <pattern>
-  shayeen dev detect
-  shayeen build
-  shayeen storage status
-  shayeen settings paths
+  shaheen system info
+  shaheen network diagnostics
+  shaheen security audit
+  shaheen crypto hash file.txt
+  shaheen download <URL>
+  shaheen files search <pattern>
+  shaheen dev detect
+  shaheen build
+  shaheen storage status
+  shaheen settings paths
 
 Prompt:
   ⟦SN-🜏⟧ ~/shaheen $
@@ -483,14 +484,14 @@ HELP
 
     *)
         err "Unknown command: $1"
-        printf 'Use: shayeen --help\n'
+        printf 'Use: shaheen --help\n'
         exit 1
         ;;
 esac
 
-shayeen_log "$*"
+shaheen_log "$*"
 EOF
 
-chmod +x "$ROOT/bin/shayeen"
+chmod +x "$ROOT/bin/shaheen"
 
 echo "ENGINE CREATED."

@@ -1,9 +1,10 @@
+CYAN="\033[1;36m"; GREEN="\033[1;32m"; YELLOW="\033[1;33m"; MAGENTA="\033[1;35m"; NC="\033[0m"
 #!/usr/bin/env bash
 set -e
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-chmod +x "$ROOT/bin/shayeen"
+chmod +x "$ROOT/bin/shaheen"
 chmod +x "$ROOT"/core/*.sh
 chmod +x "$ROOT"/modules/*/*.sh
 
@@ -14,20 +15,20 @@ else
     mkdir -p "$TARGET"
 fi
 
-ln -sf "$ROOT/bin/shayeen" "$TARGET/shayeen"
-ln -sf "$ROOT/bin/shayeen" "$TARGET/shaheen"
-ln -sf "$ROOT/bin/shayeen" "$TARGET/sn"
+ln -sf "$ROOT/bin/shaheen" "$TARGET/shaheen"
+ln -sf "$ROOT/bin/shaheen" "$TARGET/shaheen"
+ln -sf "$ROOT/bin/shaheen" "$TARGET/sn"
 
 cat > "$ROOT/uninstall.sh" <<'EOF'
 #!/usr/bin/env bash
 
 TARGET="${PREFIX:-$HOME/.local}/bin"
 
-rm -f "$TARGET/shayeen"
+rm -f "$TARGET/shaheen"
 rm -f "$TARGET/shaheen"
 rm -f "$TARGET/sn"
 
-echo "SHΛYEN command links removed."
+echo "SHAHEEN command links removed."
 EOF
 
 chmod +x "$ROOT/uninstall.sh"
@@ -36,7 +37,7 @@ cat > "$ROOT/tests/test.sh" <<'EOF'
 #!/usr/bin/env bash
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CLI="$ROOT/bin/shayeen"
+CLI="$ROOT/bin/shaheen"
 
 pass=0
 fail=0
@@ -91,12 +92,12 @@ chmod +x "$ROOT/tests/test.sh"
 
 echo
 echo "============================================================"
-echo " SHΛYEN — THE SILENT SOVEREIGN"
+echo " SHAHEEN — THE SILENT SOVEREIGN"
 echo "============================================================"
 echo
 
 echo "Testing executable..."
-"$ROOT/bin/shayeen" --version
+"$ROOT/bin/shaheen" --version
 
 echo
 echo "Running validation..."
@@ -105,10 +106,10 @@ echo "Running validation..."
 echo
 echo "Checking installed commands..."
 
-if command -v shayeen >/dev/null 2>&1; then
-    echo "shayeen : $(command -v shayeen)"
+if command -v shaheen >/dev/null 2>&1; then
+    echo "shaheen : $(command -v shaheen)"
 else
-    echo "shayeen is installed but current PATH may need refreshing."
+    echo "shaheen is installed but current PATH may need refreshing."
 fi
 
 if command -v sn >/dev/null 2>&1; then
@@ -123,17 +124,17 @@ echo " INSTALLATION COMPLETE"
 echo "============================================================"
 echo
 echo "Identity:"
-echo "  SHΛYEN — THE SILENT SOVEREIGN"
+echo "  SHAHEEN — THE SILENT SOVEREIGN"
 echo "  SHAY-EN"
 echo "  SYN"
 echo "  SΛYEN."
-echo "  SYN-94"
+echo "  SHAHEEN"
 echo
 echo "Prompt:"
 echo "  ⟦SN-🜏⟧ ~/shaheen \$"
 echo
 echo "Commands:"
-echo "  shayeen"
+echo "  shaheen"
 echo "  shaheen"
 echo "  sn"
 echo

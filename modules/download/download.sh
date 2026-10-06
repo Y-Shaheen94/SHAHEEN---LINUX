@@ -1,9 +1,10 @@
+CYAN="\033[1;36m"; GREEN="\033[1;32m"; YELLOW="\033[1;33m"; MAGENTA="\033[1;35m"; NC="\033[0m"
 #!/usr/bin/env bash
 
 download_file() {
     local url="$1"
     [ -n "$url" ] || {
-        err "Usage: shayeen download <URL>"
+        err "Usage: shaheen download <URL>"
         return 1
     }
 
