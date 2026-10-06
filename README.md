@@ -1,20 +1,22 @@
-```markdown name=README.md url=https://github.com/Y-Shaheen94/SHAHEEN---LINUX/blob/main/README.md
 <div align="center">
 
-<img src="https://i.postimg.cc/RCjf5YgB/Screenshot-20261006-124651-com-termux-Termux-Activity.jpg" alt="SHAHEEN Dashboard" width="100%" style="max-width: 1200px; border-radius: 16px; display: block; margin: 0 auto 18px auto; box-shadow: 0 10px 40px rgba(0,0,0,0.25);">
+<img src="https://i.postimg.cc/RCjf5YgB/Screenshot-20261006-124651-com-termux-Termux-Activity.jpg" alt="SHAHEEN Dashboard" width="100%" style="max-width: 1200px; border-radius: 16px; display: block; margin: 0 auto 24px auto; box-shadow: 0 20px 60px rgba(0,200,255,0.3); border: 2px solid rgba(0,200,255,0.1);">
 
-# SHAHEEN
+# ⚡ SHAHEEN
 
-<p><strong>KNOW • BUILD • PROTECT</strong></p>
+<p><strong style="font-size: 1.2em; letter-spacing: 0.15em; color: #00C8FF;">KNOW • BUILD • PROTECT</strong></p>
 
 </div>
 
+---
+
 <div align="center">
 
-[![Bash](https://img.shields.io/badge/Bash-5.1%2B-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
-[![Termux](https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-000000?style=flat-square&logo=termux&logoColor=white)](https://termux.dev/)
-[![Version](https://img.shields.io/badge/Version-1.0.0-FF006E?style=flat-square)](https://github.com/Y-Shaheen94/SHAHEEN---LINUX)
-[![License](https://img.shields.io/badge/License-Other-5B7CFF?style=flat-square)](https://github.com/Y-Shaheen94/SHAHEEN---LINUX/blob/main/LICENSE)
+[![Bash](https://img.shields.io/badge/Bash-5.1%2B-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-000000?style=for-the-badge&logo=termux&logoColor=00C8FF)](https://termux.dev/)
+[![Version](https://img.shields.io/badge/Version-1.0.0-FF006E?style=for-the-badge&logo=github)](https://github.com/Y-Shaheen94/SHAHEEN---LINUX)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-00C8FF?style=for-the-badge&logo=open-source-initiative)](https://github.com/Y-Shaheen94/SHAHEEN---LINUX)
+[![License](https://img.shields.io/badge/License-Custom-5B7CFF?style=for-the-badge)](./LICENSE)
 
 </div>
 
@@ -22,45 +24,27 @@
 
 ## 🜏 About SHAHEEN
 
-SHAHEEN is a Bash-based Terminal/CLI toolkit designed for Termux/Android and compatible Linux environments. It is structured as an interactive dashboard-style tool that organizes functions into multiple operational sections for system inspection, networking, security checks, cryptographic operations, downloads, file management, development detection, monitoring, utilities, and settings.
+**SHAHEEN** is a Bash-based Terminal/CLI toolkit engineered for Termux/Android and Linux environments. It delivers a dashboard-style interface for system inspection, networking, security analysis, cryptographic operations, downloads, file intelligence, development detection, build workflows, monitoring, and general system administration.
 
-The current interface contains these sections:
+The project is organized around a modular architecture that groups functionality into distinct operational domains:
 
-- 01 SYSTEM
-- 02 NETWORK
-- 03 SECURITY
-- 04 CRYPTO
-- 05 DOWNLOAD
-- 06 FILES
-- 07 DEV
-- 08 BUILD
-- 09 STORAGE
-- 10 SEARCH
-- 11 MONITOR
-- 12 UTILITIES
-- 13 SETTINGS
-- 14 ENVIRONMENT
-- 15 EXIT
+- **SYSTEM** — OS diagnostics, hardware status, storage review, memory checks, environment overview
+- **NETWORK** — interface inspection, route analysis, connectivity validation, network diagnostics
+- **SECURITY** — permissions review, integrity checks, security assessments, audit helpers
+- **CRYPTO** — hashing, checksum verification, encryption support, key generation
+- **DOWNLOAD** — file retrieval, remote transfer workflows, archive handling
+- **FILES** — search, compression, extraction, file organization, bulk file actions
+- **DEV** — toolchain detection, project recognition, developer environment awareness
+- **BUILD** — compilation flows, project automation, build checks
+- **STORAGE** — filesystem health, usage reporting, shared storage support
+- **SEARCH** — recursive search and filesystem pattern matching
+- **MONITOR** — system resource tracking, process monitoring, health checks
+- **UTILITIES** — random generation, timestamp tools, encoding helpers, general support functions
+- **SETTINGS** — preferences, path management, configuration handling
+- **ENVIRONMENT** — runtime detection and platform adaptability
+- **EXIT** — clean termination of the interactive session
 
-Each section reflects the actual project structure and core modules:
-
-- SYSTEM: OS details, hardware and environment inspection, storage health, memory status, package checks, and diagnostics.
-- NETWORK: interface inspection, route analysis, routing diagnostics, connectivity checks, and service/network validation.
-- SECURITY: security auditing, permissions review, integrity-related checks, and security-oriented workflows.
-- CRYPTO: hashing, encryption/decryption helpers, key generation, checksum validation, and cryptographic tooling.
-- DOWNLOAD: retrieving files from remote URLs, archive handling, and download pipeline support.
-- FILES: file searching, viewing, moving, copying, compression, and archive extraction.
-- DEV: development env detection, toolchain awareness, and project identification features.
-- BUILD: compilation and build-related operations, project-specific automation, and build checks.
-- STORAGE: storage status, filesystem usage, shared-storage access, and related diagnostics.
-- SEARCH: locating files or text patterns across directories and filesystem trees.
-- MONITOR: process and resource monitoring, disk and memory health checks, and runtime observation.
-- UTILITIES: helper functions such as formatting, conversion, random generation, timestamps, and general support tools.
-- SETTINGS: configuration, paths, and user preference handling.
-- ENVIRONMENT: compatibility and environment detection for supported systems.
-- EXIT: clean shutdown and session termination.
-
-This project is modular and built around core Bash scripts and feature modules under the repository’s `core/` and `modules/` directories.
+This repository reflects the actual project structure through its `core/` and `modules/` directories, and each menu section corresponds to a functional cluster in the Bash implementation.
 
 ---
 
@@ -68,95 +52,96 @@ This project is modular and built around core Bash scripts and feature modules u
 
 ### 🖥️ System
 - OS and environment inspection
-- Hardware and system diagnostics
-- Storage and memory information
-- Package verification and health checks
-- Runtime system overview
+- Hardware and memory diagnostics
+- Storage health and disk usage overview
+- Package verification and system checks
+- Runtime system status summaries
 
 ### 🌐 Network
 - Network interface discovery
-- Route and connectivity analysis
-- DNS and network validation
+- Routing diagnostics and gateway analysis
+- Connectivity testing and validation
 - Service and connection diagnostics
-- Remote network operations support
+- Network utility support
 
 ### 🛡️ Security
-- Security assessment workflows
-- Permission review and auditing
-- Integrity and hash-related security validation
-- Audit-oriented checks
-- Sensitive file and system review support
+- Security auditing workflows
+- Permission and ownership review
+- Integrity and hash-based verification
+- System hardening and audit-style checks
+- Sensitive access inspection support
 
 ### 🔐 Crypto
-- Hash generation
-- Checksum validation
+- Hash generation and validation
+- Checksums for file integrity checks
 - Encryption/decryption support
-- Key generation and management helpers
-- Crypto-related support utilities
+- Key generation helpers
+- Cryptographic utility workflows
 
 ### 📥 Download
-- Remote file retrieval
-- URL-based download workflow
-- Archive support
-- Download validation and integrity checks
+- Remote URL downloading
+- Archive and retrieval handling
+- Download validation support
+- Operational transfer workflows
 
 ### 📁 Files
-- Search for files and content
-- Copy, move, list, and file operations
-- Archive creation and extraction
-- Compression and file organization tasks
+- Recursive search and file discovery
+- Copy, move, list, and organize files
+- Compression and extraction workflows
+- File analysis and bulk actions
 
 ### 👨‍💻 Development
 - Development environment detection
-- Toolchain and project detection
-- Build-system awareness
-- Development utility workflows
+- Toolchain awareness and project recognition
+- Build-system detection support
+- Productivity and automation helpers for developers
 
 ### 🔨 Build
-- Project build automation
-- Build-system detection
-- Compile/test execution for supported project types
-- Developer workflow support
+- Build automation and project operation support
+- Compilation workflow handling
+- Build-system integration
+- Testing and validation assistance
 
 ### 💾 Storage
-- Filesystem usage checks
-- Storage status reporting
-- Shared storage access support
+- Filesystem usage reporting
 - Storage diagnostics
+- Shared storage awareness
+- Health and capacity checks
 
 ### 🔎 Search
-- Recursive search across the filesystem
-- Pattern lookup and text search support
-- File discovery workflows
+- Recursive pattern scanning
+- Text and filename searches
+- File discovery and filtering
+- Search-driven utilities
 
 ### 📊 Monitor
-- Process and resource monitoring
-- Memory and disk health observation
-- Runtime performance checks
-- System health overview
+- Process monitoring
+- Resource health checks
+- Performance and state observability
+- Runtime monitoring support
 
 ### 🧰 Utilities
 - Base64 operations
 - UUID generation
 - Timestamp utilities
-- Random generation and helper tools
-- General formatting and conversion tools
+- Random data generation
+- General helper functions
 
 ### ⚙️ Settings
-- Configuration management
-- Path handling and runtime preferences
-- Environment-oriented customization support
+- Configuration and path management
+- Preference handling
+- User customization support
 
 ### 🌍 Environment
-- Termux/Android detection
-- Linux compatibility checks
-- System adaptability and platform awareness
+- Termux/Android environment detection
+- Linux compatibility awareness
+- Platform adaptability checks
 
 ---
 
 ## ⚡ Quick Commands
 
-The project exposes command entry points through the installed `shaheen` binary and its alias `sn`.
+The project exposes real commands used by the toolkit and reflected in the interface flow.
 
 ```bash
 shaheen
@@ -173,19 +158,39 @@ shaheen --version
 
 ## 🚀 Installation
 
-The repository includes an installation script:
-
 ```bash
 git clone https://github.com/Y-Shaheen94/SHAHEEN---LINUX.git
 cd SHAHEEN---LINUX
 bash install.sh
-```
-
-The install script creates the command link so the project can be run directly as:
-
-```bash
 shaheen
 ```
+
+To uninstall:
+
+```bash
+bash uninstall.sh
+```
+
+---
+
+## 📱 Developer Identity
+
+This project is maintained by:
+
+- GitHub: [Y-Shaheen94](https://github.com/Y-Shaheen94)
+- Repository: [SHAHEEN---LINUX](https://github.com/Y-Shaheen94/SHAHEEN---LINUX)
+
+The developer profile repository includes these public links that are present in the referenced profile and can be used as-is:
+
+- Instagram: [@_55.0_](https://www.instagram.com/_55.0_)
+- Facebook: [Profile](https://www.facebook.com/share/192Jua4KFu/)
+- X / Twitter: [@You_sh94](https://x.com/You_sh94)
+- Telegram: [@II_4O4](https://t.me/II_4O4)
+- Threads: [@1.0_v_](https://www.threads.com/@1.0_v_)
+- WhatsApp: [Contact](https://wa.link/lc6f5w)
+- TikTok: [@zix8ii](https://www.tiktok.com/@zix8ii)
+
+> No additional personal or social links were invented beyond those present in the developer reference repository.
 
 ---
 
@@ -216,9 +221,9 @@ SHAHEEN---LINUX/
 ├── banner.txt
 ├── VERSION
 ├── LICENSE
+├── README.md
 ├── install.sh
 ├── uninstall.sh
-├── README.md
 ├── 01-foundation.sh
 ├── 02-core-modules.sh
 ├── 03-tools-modules.sh
@@ -228,14 +233,14 @@ SHAHEEN---LINUX/
 ├── finalize_shaheen.sh
 ├── final_fix.sh
 ├── install_shaheen_ui.sh
-└── uninstall.sh
+└── test.txt
 ```
 
 ---
 
-## 📦 Version
+## 🏷️ Version
 
-The project version currently defined in the repository is:
+The repo currently defines:
 
 ```text
 1.0.0
@@ -243,55 +248,22 @@ The project version currently defined in the repository is:
 
 ---
 
-## 👤 Developer / Maintainer
-
-This project is maintained by:
-
-- GitHub: [Y-Shaheen94](https://github.com/Y-Shaheen94)
-- Profile: [Y-Shaheen94 / SHAHEEN---LINUX](https://github.com/Y-Shaheen94/SHAHEEN---LINUX)
-
-Additional public links recorded in the author’s referenced profile repository include:
-
-- Instagram: [@_55.0_](https://www.instagram.com/_55.0_)
-- Facebook: [Profile](https://www.facebook.com/share/192Jua4KFu/)
-- X / Twitter: [@You_sh94](https://x.com/You_sh94)
-- Telegram: [@II_4O4](https://t.me/II_4O4)
-- Threads: [Profile](https://www.threads.com/@1.0_v_?invite=0)
-- WhatsApp: [Contact](https://wa.link/lc6f5w)
-- TikTok: [@zix8ii](https://www.tiktok.com/@zix8ii)
-
-> Only links and information present in the project and developer reference repository were used here.
-
----
-
-## 🤝 Support
-
-For issues, feature requests, or project discussion, use the repository’s GitHub page:
-
-- [Issues](https://github.com/Y-Shaheen94/SHAHEEN---LINUX/issues)
-- [Discussions](https://github.com/Y-Shaheen94/SHAHEEN---LINUX/discussions)
-
----
-
 ## 📜 License
 
-The project repository currently identifies the license as:
+The repository currently lists the license as:
 
 - Other
 
-Please refer to the [LICENSE](LICENSE) file in this repository for the full legal terms.
+Please refer to the [LICENSE](LICENSE) file in this repository for the exact legal terms.
 
 ---
 
 ## ✅ Summary
 
-SHAHEEN is a modular Bash-based terminal toolkit for Termux/Android and compatible Linux environments, designed for system administration, network diagnostics, security auditing, cryptographic operations, file management, development detection, monitoring, and general utility workflows. It is structured around a menu-driven interface with specialized sections for each operational domain.
-
-Built for practicality, security, and automation, SHAHEEN reflects the actual code structure of the repository and its modular design philosophy.
+SHAHEEN is a modular Bash-based terminal toolkit built for Termux and Linux systems, with a dashboard-style interface that groups tools into categories like system management, networking, security, cryptography, downloads, files, build operations, monitoring, and developer functions. The project is structured around real modules and scripts that provide a practical, command-driven experience for terminal users.
 
 <div align="center">
 
 <p><strong>KNOW • BUILD • PROTECT</strong></p>
 
 </div>
-```
