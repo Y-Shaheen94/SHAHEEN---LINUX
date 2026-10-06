@@ -71,7 +71,7 @@ box() {
 
 
 header() {
-    clear && cat $SHAHEEN_ROOT/banner.txt 2>/dev/null || true
+    clear && cat $HOME/shaheen/banner.txt 2>/dev/null || true
     # falcon removed
     printf '\n'
     printf '%s%s%s ~/shaheen $ %s\n' "$BRIGHT_MAGENTA" "⟦SN-🜏⟧" "$BRIGHT_WHITE" "$RESET"
